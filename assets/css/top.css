@@ -1,0 +1,69 @@
+@charset "UTF-8";
+
+.mainvisual{
+	max-width: 900px;
+}
+
+
+.shop{
+	text-align: center;
+	padding: 0 1rem;
+}
+
+
+
+.text{
+	max-width: 550px;
+	font-size: 1.2rem;
+	margin: 0 auto;
+	
+}
+
+.text dt{
+	font-weight: bold;
+	text-align: left;
+	margin-top: 0.5rem;
+}
+
+.text dd{
+	text-align: left;
+	margin-left: 3rem;
+}
+
+.text .tel a{
+	font-weight: bold;
+	text-decoration: underline;
+	text-decoration-color: #fffc0c;
+
+
+}
+
+.map{
+	margin: 0 auto;
+	max-width: 700px;
+	padding: 0 1rem;
+}
+
+.link{
+	max-width: 700px;
+	margin: 0 auto;
+	text-align: right;
+	margin-bottom: 2rem;
+	padding-right: 1rem;
+}
+
+.link a{
+	background: url(../images/link.svg)no-repeat left center;
+	padding-left: 1.5rem;
+	font-weight: bold;
+
+
+}
+
+.link a:hover{
+	background: url(../images/link_hover.svg)no-repeat left center;
+	text-decoration: underline double #abe1fa;
+
+}
+
+
