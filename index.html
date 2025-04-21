@@ -1,73 +1,111 @@
 <!DOCTYPE html>
-<html lang="ja" dir="ltr">
-	<head>
-		<meta charset="utf-8">
-		<meta name="description" content="髪処てらさき">
-		<meta name="viewport" content="width=device-width">
-		<title>トップ 髪処てらさき</title>
-		<link rel="icon" href="favicon.ico">
-		<link rel="stylesheet" href="assets/css/reset.css">
-		<link rel="stylesheet" href="assets/css/common.css">
-		<link rel="stylesheet" href="assets/css/top.css">
-	</head>
-	<body>
-		<div class="container">
-			<header>
-				<h1 class="logo"><a href="index.html"><img src="assets/images/logo.png" alt="髪処てらさき"></a></h1>
-				<div class="address">
-					<p>千葉県市川市伊勢宿8-22</p>
-					<p class="tel"><a href="tel:047-711-4419">tel：047-711-4419</a></p>
-				</div>
-			</header>
-			<nav>
-				<ul>
-					<li class="nav_up"><a href="index.html">トップ</a></li>
-					<li class="nav_up"><a href="menu/index.html">料金</a></li>
-					<li class="nav_up"><a href="access/index.html">アクセス</a></li>
-					<li class="nav_down"><a href="about/index.html">「髪処」とは</a></li>
-					<li class="nav_down"><a href="stylist/index.html">スタイリスト</a></li>
-				</ul>
-			</nav>
-			<main>
-				<p class="mainvisual"><img src="assets/images/mainVisual.jpg" alt="髪処てらさきの店舗"></p>
-				<div class="shop">
-					<h2>髪処てらさき</h2>
-					<div class="text">
-						<dl>
-							<dt>住所</dt>
-								<dd>千葉県市川市伊勢宿8-22</dd>
-							<dt>電話</dt>
-								<dd class="tel"><a href="tel:047-711-4419">047-711-4419</a></dd>
-							<dt>営業時間</dt>
-								<dd>9:00～19:00</dd>
-								<dd>（予約がない場合18:00で終了する場合があります）</dd>
-							<dt>定休日</dt>
-								<dd>毎週火曜日</dd>
-								<dd>（毎月第1火・水曜日は連休となります）</dd>
-							<dt>カット料金</dt>
-								<dd>総合カット2,500円</dd>
-								<dd>（カット・シャンプー・顔剃り）</dd>
-							<dt>予約方法</dt>
-								<dd>電話のみ</dd>
-								<dd>（ネット予約は行っておりません）</dd>
-						</dl>
-					</div>
-				</div>
-				<p class="link"><a href="menu/index.html">料金メニューへ</a></p>
-				<p class="map"><img src="assets/images/map.jpg" alt="髪処てらさきまでの地図"></p>
-				<p class="link"><a href="access/index.html">詳しいマップへ</a></p>
-			</main>
-			<footer>
-				<ul>
-					<li><a href="index.html">トップ</a></li>
-					<li><a href="menu/index.html">料金</a></li>
-					<li><a href="access/index.html">アクセス</a></li>
-					<li><a href="about/index.html">「髪処」とは</a></li>
-					<li><a href="stylist/index.html">スタイリスト</a></li>
-				</ul>
-				<p class="stamp"><a href="index.html"><img src="assets/images/stamp.jpg" alt="髪処てらさきの印鑑風のロゴ"></a></p>
-				<p><small>Copyright &copy; 髪処てらさき All Rights Reserved.</small></p>
-			</footer>
-		</div>
-	</body>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>髪処てらさき｜地域密着の床屋</title>
+  <link rel="icon" href="favicon.ico">
+  <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Yuji+Syuku&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <header>
+    <div style="display: flex; justify-content: center; align-items: center; gap: 20px; flex-wrap: wrap;">
+      <img src="assets/images/stamp.jpg" alt="印鑑風ロゴ" style="width: 80px;">
+      <div style="text-align: left;">
+        <h1 style="font-size: 2em; margin: 0; font-family: 'Shippori Mincho B1', serif;">髪処てらさき</h1>
+        <p style="font-size: 0.9em; margin-top: 4px;">千葉県市川市伊勢宿8-22　｜　TEL：047-711-4419</p>
+      </div>
+    </div>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="index.html">トップ</a></li>
+      <li><a href="menu/index.html">料金</a></li>
+      <li><a href="access/index.html">アクセス</a></li>
+      <li><a href="about/index.html">「髪処」とは</a></li>
+      <li><a href="stylist/index.html">スタイリスト</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <!-- ヒーローセクション -->
+    <section class="hero">
+      <img src="assets/images/mainVisual.jpg" alt="店舗外観">
+      <p class="catchcopy">「キャリア30年超の人情職人。今日もてらさき、いい仕事してます！」</p>
+    </section>
+
+    <!-- てらさき劇場（人柄＋キャラ） -->
+    <section class="owner-profile">
+      <h2>髪処のてらさき劇場</h2>
+      <div class="owner-box">
+        <img src="assets/images/terasaki.jpg" alt="てらさきさん" class="owner-photo">
+        <div class="owner-text">
+          <p>江戸っ子気質、父の背中を見て育った職人気質。カット歴30年、顔剃りが命！</p>
+          <p>無口そうに見えて、実はツッコミ名人！？ 一度会えばクセになる“人情職人”です。</p>
+        </div>
+      </div>
+      <div class="owner-box">
+        <img src="assets/images/fes.jpg" alt="お祭り男" class="owner-photo">
+        <div class="owner-text">
+          <p>【お祭り男】 地元のお祭りでは法被姿で大活躍。町内会でも頼られる存在です。</p>
+        </div>
+      </div>
+      <div class="owner-box">
+        <img src="assets/images/surf.jpg" alt="サーファーてらちゃん" class="owner-photo">
+        <div class="owner-text">
+          <p>【サーファーてらちゃん】 休日は海へ。波乗り姿はなかなか見られませんが、伝説です（たぶん）。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 店舗情報 -->
+    <section class="shop">
+      <h2>店舗情報</h2>
+      <dl>
+        <dt>住所</dt><dd>千葉県市川市伊勢宿8-22</dd>
+        <dt>電話</dt><dd><a href="tel:047-711-4419">047-711-4419</a></dd>
+        <dt>営業時間</dt><dd>9:00～19:00（予約がない場合18:00で終了）</dd>
+        <dt>定休日</dt><dd>火曜・第1火水は連休</dd>
+        <dt>予約</dt><dd>お電話のみ。ネット予約は行っておりません。</dd>
+      </dl>
+    </section>
+
+    <!-- 料金紹介 -->
+    <section class="shop">
+      <h2>料金のご案内</h2>
+      <dl>
+        <dt>総合カット</dt><dd>2,500円（カット・シャンプー・顔剃り）</dd>
+        <dt>シルバー（65歳以上）</dt><dd>2,000円</dd>
+        <dt>高校生</dt><dd>2,100円</dd>
+      </dl>
+      <p class="link"><a href="menu/index.html">→ 詳しいメニューを見る</a></p>
+    </section>
+
+    <!-- アクセス -->
+    <section class="access">
+      <h2>アクセス</h2>
+      <img src="assets/images/map.jpg" alt="地図">
+      <p>千葉県市川市伊勢宿8-22<br>行徳駅から徒歩約10分</p>
+      <p class="link"><a href="access/index.html">→ 詳しい地図はこちら</a></p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-nav">
+      <ul>
+        <li><a href="index.html">トップ</a></li>
+        <li><a href="menu/index.html">料金</a></li>
+        <li><a href="access/index.html">アクセス</a></li>
+        <li><a href="about/index.html">「髪処」とは</a></li>
+        <li><a href="stylist/index.html">スタイリスト</a></li>
+      </ul>
+    </div>
+    <img src="assets/images/stamp.jpg" alt="印鑑風ロゴ">
+    <p>&copy; 髪処てらさき All Rights Reserved.</p>
+  </footer>
+</body>
 </html>
