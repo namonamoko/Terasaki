@@ -33,11 +33,11 @@ header {
   width: 80px;
 }
 header h1 {
+  font-family: 'Shippori Mincho B1', serif;
   font-size: 2em;
   margin: 0;
 }
 header p {
-  font-size: 0.9em;
   margin-top: 4px;
 }
 nav {
@@ -58,7 +58,6 @@ nav a {
   border-radius: 10px;
   padding: 12px 20px;
   font-weight: bold;
-  font-size: 1.2em;
   transition: all 0.2s ease;
   font-family: 'M PLUS Rounded 1c', sans-serif;
   color: #000;
@@ -129,22 +128,22 @@ section h2::after {
 }
 .owner-box {
   display: flex;
-  flex-wrap: wrap;
-  align-items: center;
+  flex-direction: row;         /* ← 横並びに */
+  align-items: flex-start;
   justify-content: center;
-  gap: 20px;
-  text-align: left;
-  max-width: 800px;
-  margin: 0 auto;
+  gap: 30px;
+  max-width: 900px;
+  margin: 0 auto 40px;
+  text-align: left;            /* 文章は左寄せ */
+  flex-wrap: nowrap;           /* モバイル以外では回り込ませない */
 }
 .owner-photo {
-  width: 180px;
+  width: 300px;
   border-radius: 12px;
 }
 .owner-text {
   line-height: 1.8;
-  font-size: 1em;
-  max-width: 400px;
+  max-width: 600px;
 }
 .shop dl {
   display: grid;
@@ -152,7 +151,6 @@ section h2::after {
   gap: 10px 30px;
   max-width: 600px;
   margin: 0 auto 20px;
-  font-size: 0.95em;
   text-align: left;
 }
 .shop dt {
@@ -173,7 +171,6 @@ section h2::after {
   background: #2d1e1c;
   color: #fdd835;
   padding: 12px 24px;
-  font-size: 1.2em;
   border-radius: 8px;
   display: inline-block;
   margin-top: 1rem;
@@ -195,7 +192,6 @@ footer {
   color: #fdd835;
   text-align: center;
   padding: 20px;
-  font-size: 0.9em;
 }
 footer img {
   width: 100px;
@@ -216,7 +212,6 @@ footer img {
 }
 .footer-nav a {
   color: #fdd835;
-  font-size: 0.85em;
   text-decoration: none;
   padding: 4px 8px;
   border-radius: 4px;
@@ -242,7 +237,6 @@ footer img {
     text-align: center;
   }
   .hero-text {
-    font-size: 1.2em;
     bottom: 10px;
     left: 10px;
   }
@@ -295,7 +289,6 @@ footer img {
 .menu-table th, .menu-table td {
   border-bottom: 4px solid #fff;
   padding: 0.8rem;
-  font-size: 1.1em;
 }
 
 .menu-table th {
