@@ -6,7 +6,7 @@
 
 body {
   font-family: 'M PLUS Rounded 1c', sans-serif;
-  background-color: #fff8e1;
+  background-color: #fff4d1;
   color: #3a2a28;
   line-height: 1.8;
   font-size: 1.25em;
@@ -52,7 +52,7 @@ header p {
 }
 
 nav {
-  background-color: #e0c78f;
+  background-color: #e8c282;
   background-image:
     linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent),
     radial-gradient(circle, rgba(255, 255, 255, 0.3) 1px, transparent 1px),
@@ -187,10 +187,10 @@ section:nth-of-type(even) {
 
 
 section h2 {
-  margin-bottom: 24px;
+  margin-bottom: 48px;
   font-size: 1.6em;
   display: inline-block;
-  padding: 12px 20px 16px; /* 裾をちょっと長めに */
+  padding: 12px 40px 16px 20px; /* 裾をちょっと長めに */
   font-family: 'Shippori Mincho B1', serif;
   color: #2d1e1c;
   background: #fdd835;
@@ -199,6 +199,11 @@ section h2 {
   position: relative;
   box-shadow: 2px 2px 6px rgba(0,0,0,0.1); /* 軽い立体感 */
 }
+section h2::before {
+  content: "🔹"; /* 例えば招き猫やハサミ系のUnicodeも◎ */
+  font-size: 1.1em;
+}
+
 
 section h2::after {
   content: "";
@@ -279,15 +284,18 @@ section h2::after {
   margin-bottom: 1.5rem;
   border-radius: 6px;
 }
-
+.message-box {
+  border-left: 6px dotted #c62828;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+}
 
 .owner-text {
   line-height: 1.8;
-  max-width: 600px;
+  max-width: 640px;
+  text-align: left;
 }
-
-/* 手書きメモ風スタイル（整然 + ラフ感） */
-.shop dl {
+/* ===== 店舗情報用 ===== */
+.shop-info dl {
   position: relative;
   display: grid;
   grid-template-columns: auto 1fr;
@@ -303,8 +311,51 @@ section h2::after {
   font-size: 1.05em;
 }
 
-.shop dl {
+.shop-info dl::before,
+.shop-info dl::after {
+  content: "";
+  position: absolute;
+  top: -14px;
+  width: 80px;
+  height: 20px;
+  background: repeating-linear-gradient(45deg, #fbeec1, #fbeec1 5px, #f4d06f 5px, #f4d06f 10px);
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+  z-index: 2;
+}
+
+.shop-info dl::before {
+  left: -14px;
+  transform: rotate(-12deg);
+}
+
+.shop-info dl::after {
+  right: -14px;
+  transform: rotate(12deg);
+}
+
+.shop-info dt {
+  color: #c62828;
+  font-weight: bold;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.shop-info dd {
+  text-align: left;
+  margin: 0;
+  padding-bottom: 6px;
+  border-bottom: 1px dotted #ccc;
+}
+
+
+/* ===== 料金表用 ===== */
+.price-list dl {
   position: relative;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 12px 20px;
+  max-width: 480px;
+  margin: 0 auto;
   padding: 1.5rem;
   background: #fffefc;
   border: 2px dashed #c62828;
@@ -314,60 +365,41 @@ section h2::after {
   font-size: 1.05em;
 }
 
-/* 左上マステ：やや右下がり（困り眉） */
-.shop dl::before {
+.price-list dl::before,
+.price-list dl::after {
   content: "";
   position: absolute;
   top: -14px;
+  width: 80px;
+  height: 20px;
+  background: repeating-linear-gradient(45deg, #fbeec1, #fbeec1 5px, #f4d06f 5px, #f4d06f 10px);
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+  z-index: 2;
+}
+
+.price-list dl::before {
   left: -14px;
-  width: 80px;
-  height: 20px;
-  background: repeating-linear-gradient(
-    45deg,
-    #fbeec1,
-    #fbeec1 5px,
-    #f4d06f 5px,
-    #f4d06f 10px
-  );
-  transform: rotate(-12deg); /* ←下げ角強めに */
-  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
-  z-index: 2;
+  transform: rotate(-12deg);
 }
 
-/* 右上マステ：やや左下がり（対称で困り眉） */
-.shop dl::after {
-  content: "";
-  position: absolute;
-  top: -14px;
+.price-list dl::after {
   right: -14px;
-  width: 80px;
-  height: 20px;
-  background: repeating-linear-gradient(
-    45deg,
-    #fbeec1,
-    #fbeec1 5px,
-    #f4d06f 5px,
-    #f4d06f 10px
-  );
-  transform: rotate(12deg); /* ←左右対称で統一感 */
-  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
-  z-index: 2;
+  transform: rotate(12deg);
 }
 
-.shop dt {
+.price-list dt {
   color: #c62828;
   font-weight: bold;
   text-align: left;
   white-space: nowrap;
 }
 
-.shop dd {
-  text-align: left;
+.price-list dd {
+  text-align: right; /* ←ここが大事：金額を右寄せに */
   margin: 0;
   padding-bottom: 6px;
   border-bottom: 1px dotted #ccc;
 }
-
 
 .link {
   text-align: center;
