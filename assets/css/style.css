@@ -246,22 +246,92 @@ section h2::after {
   max-width: 600px;
 }
 
+/* 手書きメモ風スタイル（整然 + ラフ感） */
 .shop dl {
+  position: relative;
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 10px 30px;
-  max-width: 600px;
-  margin: 0 auto 20px;
-  text-align: left;
+  grid-template-columns: auto 1fr;
+  gap: 12px 20px;
+  max-width: 580px;
+  margin: 0 auto;
+  padding: 1.5rem;
+  background: #fffefc;
+  border: 2px dashed #c62828;
+  border-radius: 10px;
+  box-shadow: 3px 3px 6px rgba(0,0,0,0.08);
+  font-family: 'Kosugi Maru', 'M PLUS Rounded 1c', sans-serif;
+  font-size: 1.05em;
+}
+
+.shop dl {
+  position: relative;
+  padding: 1.5rem;
+  background: #fffefc;
+  border: 2px dashed #c62828;
+  border-radius: 10px;
+  box-shadow: 3px 3px 6px rgba(0,0,0,0.08);
+  font-family: 'Kosugi Maru', 'M PLUS Rounded 1c', sans-serif;
+  font-size: 1.05em;
+}
+
+/* 左上マステ：やや右下がり（困り眉） */
+.shop dl::before {
+  content: "";
+  position: absolute;
+  top: -14px;
+  left: -14px;
+  width: 80px;
+  height: 20px;
+  background: repeating-linear-gradient(
+    45deg,
+    #fbeec1,
+    #fbeec1 5px,
+    #f4d06f 5px,
+    #f4d06f 10px
+  );
+  transform: rotate(-12deg); /* ←下げ角強めに */
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+  z-index: 2;
+}
+
+/* 右上マステ：やや左下がり（対称で困り眉） */
+.shop dl::after {
+  content: "";
+  position: absolute;
+  top: -14px;
+  right: -14px;
+  width: 80px;
+  height: 20px;
+  background: repeating-linear-gradient(
+    45deg,
+    #fbeec1,
+    #fbeec1 5px,
+    #f4d06f 5px,
+    #f4d06f 10px
+  );
+  transform: rotate(12deg); /* ←左右対称で統一感 */
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+  z-index: 2;
 }
 
 .shop dt {
-  font-weight: bold;
   color: #c62828;
+  font-weight: bold;
+  text-align: left;
+  white-space: nowrap;
 }
+
+.shop dd {
+  text-align: left;
+  margin: 0;
+  padding-bottom: 6px;
+  border-bottom: 1px dotted #ccc;
+}
+
 
 .link {
   text-align: center;
+  margin-top: 2rem; /* ←余白の確保 */
 }
 
 /* ▶️ 共通のボタンスタイル */
