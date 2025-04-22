@@ -12,11 +12,11 @@
 </head>
 <body>
   <header>
-    <div style="display: flex; justify-content: center; align-items: center; gap: 20px; flex-wrap: wrap;">
-      <img src="assets/images/stamp.jpg" alt="印鑑風ロゴ" style="width: 80px;">
-      <div style="text-align: left;">
-        <h1 style="font-size: 2em; margin: 0; font-family: 'Shippori Mincho B1', serif;">髪処てらさき</h1>
-        <p style="font-size: 0.9em; margin-top: 4px;">千葉県市川市伊勢宿8-22　｜　TEL：047-711-4419</p>
+    <div class="header-box">
+      <img src="assets/images/stamp.jpg" alt="印鑑風ロゴ" class="stamp-logo">
+      <div>
+        <h1>髪処てらさき</h1>
+        <p>千葉県市川市伊勢宿8-22　｜　TEL：047-711-4419</p>
       </div>
     </div>
   </header>
@@ -32,30 +32,27 @@
   <main>
     <!-- ヒーローセクション -->
     <section class="hero">
-      <img src="assets/images/mainVisual.jpg" alt="店舗外観">
+      <div class="hero-overlay">
+        <img src="assets/images/mainVisual.jpg" alt="店舗外観">
+        <div class="hero-text">地域密着の床屋｜髪処てらさき</div>
+      </div>
       <p class="catchcopy">「キャリア30年超の人情職人。今日もてらさき、いい仕事してます！」</p>
     </section>
 
-    <!-- てらさき劇場（人柄＋キャラ） -->
+    <!-- 店主紹介 -->
     <section class="owner-profile">
-      <h2>髪処のてらさき劇場</h2>
+      <h2>店主紹介</h2>
       <div class="owner-box">
         <img src="assets/images/terasaki.jpg" alt="てらさきさん" class="owner-photo">
         <div class="owner-text">
-          <p>江戸っ子気質、父の背中を見て育った職人気質。カット歴30年、顔剃りが命！</p>
-          <p>無口そうに見えて、実はツッコミ名人！？ 一度会えばクセになる“人情職人”です。</p>
+          <p>松戸出身。父の理髪店を手伝ったのがきっかけで、関東一円を修行し、ここ市川で独立。</p>
+          <p>“髪を切る場所も、生きる上で大事な場所”。そんな想いから「髪処」と名付けました。</p>
         </div>
       </div>
       <div class="owner-box">
-        <img src="assets/images/fes.jpg" alt="お祭り男" class="owner-photo">
         <div class="owner-text">
-          <p>【お祭り男】 地元のお祭りでは法被姿で大活躍。町内会でも頼られる存在です。</p>
-        </div>
-      </div>
-      <div class="owner-box">
-        <img src="assets/images/surf.jpg" alt="サーファーてらちゃん" class="owner-photo">
-        <div class="owner-text">
-          <p>【サーファーてらちゃん】 休日は海へ。波乗り姿はなかなか見られませんが、伝説です（たぶん）。</p>
+          <p>カット歴30年。カミソリの腕と人情で、常連さんも初めての方も笑顔に。</p>
+          <p>子どもからお年寄りまで、ほっとできる「町の床屋さん」です。</p>
         </div>
       </div>
     </section>
@@ -70,6 +67,7 @@
         <dt>定休日</dt><dd>火曜・第1火水は連休</dd>
         <dt>予約</dt><dd>お電話のみ。ネット予約は行っておりません。</dd>
       </dl>
+      <p class="link"><a href="tel:047-711-4419" class="call-btn">📞 お電話で予約する</a></p>
     </section>
 
     <!-- 料金紹介 -->
