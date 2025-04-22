@@ -264,31 +264,61 @@ section h2::after {
   text-align: center;
 }
 
-.link a {
+/* ▶️ 共通のボタンスタイル */
+.call-btn,
+.link-btn {
+  position: relative;
   background: #c62828;
   color: white;
   padding: 12px 24px;
-  border-radius: 8px;
+  border-radius: 6px;
   display: inline-block;
   margin-top: 1rem;
   font-weight: bold;
-  transition: background 0.2s ease, color 0.2s ease;
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
+  transition: all 0.2s ease;
+  text-align: center;
+  text-decoration: none;
+  border: none;
 }
 
-.call-btn {
-  background: #c62828;
-  color: white;
-  padding: 12px 24px;
-  border-radius: 8px;
-  display: inline-block;
-  margin-top: 1rem;
-  font-weight: bold;
-  transition: background 0.2s ease, color 0.2s ease;
+/* ▶️ 共通のホバー挙動 */
+.call-btn:hover,
+.link-btn:hover {
+  transform: scale(1.02) rotate(-1deg);
+  background: #a91f1f;
+  box-shadow: 4px 4px 10px rgba(0,0,0,0.4);
 }
 
-.call-btn:hover {
-  background: #c62828;
-  color: white;
+/* ▶️ 共通のピン／メモ風 ::before装飾 */
+.call-btn::before,
+.link-btn::before {
+  position: absolute;
+  top: -14px;
+  left: -5px;
+  transform: translateX(-50%) rotate(-8deg);
+  font-size: 0.95em;
+  background: #fbeec1;
+  padding: 4px 8px;
+  border: 1px solid #a52a2a;
+  border-radius: 4px;
+  color: #2d1e1c;
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+  box-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+  opacity: 0.9;
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+/* ▶️ 個別指定：電話ボタン */
+.call-btn::before {
+  content: '📞';
+}
+
+/* ▶️ 個別指定：リンクボタン */
+.link-btn::before {
+  content: '📌';
 }
 
 .access img {
