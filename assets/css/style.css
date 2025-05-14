@@ -534,6 +534,28 @@ section h2::after {
   margin: 0 auto;
 }
 
+.map-frame {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 1rem;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.access-description {
+  text-align: center;
+  margin: 1rem auto;
+  max-width: 600px;
+  font-size: 1.2em;
+  line-height: 1.8;
+}
+
+.access-comment {
+  text-align: center;
+  font-style: italic;
+  margin: 2rem 1rem;
+}
+
 footer {
   background: repeating-linear-gradient(45deg, #2d1e1c, #2d1e1c 10px, #3a2a28 10px, #3a2a28 20px);
   color: #fdd835;
