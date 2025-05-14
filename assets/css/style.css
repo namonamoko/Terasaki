@@ -433,8 +433,6 @@ section h2::after {
   color: #c62828;
   font-weight: bold;
   text-align: left;
-  white-space: normal;
-  word-break: keep-all;
 }
 
 .price-list dd {
@@ -466,6 +464,8 @@ section h2::after {
   margin-top: 0.2em;
   font-family: 'Kosugi Maru', sans-serif;
   letter-spacing: 0.02em;
+  white-space: normal;
+  word-break: break-word;
 }
 
 .menu-comment {
