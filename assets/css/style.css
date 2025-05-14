@@ -391,7 +391,7 @@ section h2::after {
 .price-list dl {
   position: relative;
   display: grid;
-  grid-template-columns: 1fr auto;
+  grid-template-columns: minmax(8em, 1fr) auto;
   gap: 12px 20px;
   max-width: 480px;
   margin: 0 auto;
@@ -430,7 +430,8 @@ section h2::after {
   color: #c62828;
   font-weight: bold;
   text-align: left;
-  white-space: nowrap;
+  white-space: normal;
+  word-break: keep-all;
 }
 
 .price-list dd {
@@ -438,6 +439,7 @@ section h2::after {
   margin: 0;
   padding-bottom: 6px;
   border-bottom: 1px dotted #ccc;
+  white-space: nowrap;
 }
 
 .price-list .price-block {
@@ -456,6 +458,7 @@ section h2::after {
 }
 
 .price-list dt small {
+  line-height: 1.4;
   display: block;
   font-size: 0.8em;
   color: #a55b00;
