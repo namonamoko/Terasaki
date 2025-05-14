@@ -611,8 +611,8 @@ footer img {
   }
 
   nav li {
-    width: 50%;
-    max-width: 300px;
+    width: 100%;
+    max-width: 240px;
   }
 
   nav a {
