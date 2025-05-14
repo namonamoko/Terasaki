@@ -433,6 +433,22 @@ section h2::after {
   border-bottom: 1px dotted #ccc;
 }
 
+.price-list .price-block {
+  margin-bottom: 2.5rem;
+}
+
+.price-list .price-block h3 {
+  font-size: 1.3em;
+  background: #fdd835;
+  display: inline-block;
+  padding: 0.4em 1em;
+  border: 2px solid #2d1e1c;
+  border-radius: 4px;
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+  margin-bottom: 1rem;
+}
+
+
 .link {
   text-align: center;
   margin-top: 2rem; /* ←余白の確保 */
