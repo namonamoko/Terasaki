@@ -35,6 +35,7 @@ header {
   align-items: center;
   gap: 20px;
   flex-wrap: wrap;
+  text-align: left;
 }
 
 .stamp-logo {
@@ -45,10 +46,41 @@ header h1 {
   font-family: 'Shippori Mincho B1', serif;
   font-size: 2em;
   margin: 0;
+  color: #fff8b0;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.4);
+}
+.title-line {
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+  flex-wrap: wrap;
 }
 
-header p {
-  margin-top: 4px;
+.title-line h1 {
+  font-family: 'Shippori Mincho B1', serif;
+  font-size: 2em;
+  margin: 0;
+  color: #fff8b0;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.4);
+}
+
+.tel-inline a {
+  background: #9e1b1b;
+  color: #fff;
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: 0.95em;
+  font-weight: bold;
+  box-shadow: 2px 2px 6px rgba(0,0,0,0.3);
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.tel-inline a:hover {
+  background: #d32f2f;
+  transform: scale(1.08) rotate(-1deg);
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+  letter-spacing: 0.5px;
 }
 
 nav {
