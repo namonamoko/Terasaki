@@ -194,6 +194,7 @@ nav a:hover {
   box-shadow: 2px 2px 6px rgba(0,0,0,0.2);
   font-size: 1.3em;
   white-space: nowrap;
+  text-align: center;
 }
 
 .catchcopy {
@@ -448,6 +449,16 @@ section h2::after {
   margin-bottom: 1rem;
 }
 
+.price-list dt small {
+  display: block;
+  font-size: 0.8em;
+  color: #a55b00; /* 赤茶系で温かみを統一 */
+  margin-top: 0.2em;
+  font-family: 'Kosugi Maru', sans-serif;
+  letter-spacing: 0.02em;
+}
+
+
 
 .link {
   text-align: center;
@@ -560,17 +571,21 @@ footer img {
 
 @media (max-width: 600px) {
   nav ul {
-    flex-wrap: wrap;
-  justify-content: center;
-  gap: 10px 10px;
-}
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
 
-nav li {
-  width: calc(50% - 10px);
-  display: flex;
-  justify-content: center;
-}
+  nav li {
+    width: 100%;
+    max-width: 300px;
+  }
 
+  nav a {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
 }
 
 
@@ -647,3 +662,40 @@ nav li {
   border-radius: 8px;
   box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
 }
+
+@media (max-width: 600px) {
+  .header-box {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 12px;
+  }
+
+  .title-line {
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .title-line h1 {
+    font-size: 1.6em;
+    text-align: center;
+  }
+
+  .tel-inline a {
+    display: inline-block;
+    font-size: 1em;
+    padding: 8px 14px;
+  }
+
+  .area-catch {
+    font-size: 0.95em;
+    max-width: 90%;
+    line-height: 1.5;
+  }
+
+  .stamp-logo {
+    width: 70px;
+  }
+}
+
