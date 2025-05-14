@@ -648,7 +648,6 @@ footer img {
   .area-catch {
     text-align: center;
     font-size: 0.95em;
-    max-width: 90%;
     line-height: 1.5;
   }
 
@@ -667,8 +666,8 @@ footer img {
     padding: 0.5em 1em;
   }
 
-  h2 {
-    font-size: 1.2rem;
+  section h2 {
+    font-size: 1.5rem;
   }
 
 }
