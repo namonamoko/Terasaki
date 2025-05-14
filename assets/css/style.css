@@ -1,3 +1,6 @@
+/* --------------------
+  1. ベース設定・共通設定
+-------------------- */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -11,7 +14,7 @@ body {
   line-height: 1.8;
   font-size: 1.25em;
   letter-spacing: 0.03em;
-    background-image:
+  background-image:
     radial-gradient(circle, rgba(255, 255, 255, 0.4) 1px, transparent 1px),
     radial-gradient(circle, rgba(0, 0, 0, 0.03) 1px, transparent 1px);
   background-size: 6px 6px, 4px 4px;
@@ -22,6 +25,10 @@ a {
   color: inherit;
 }
 
+
+/* --------------------
+  2. ヘッダー
+-------------------- */
 header {
   background: repeating-linear-gradient(45deg, #2d1e1c, #2d1e1c 10px, #3a2a28 10px, #3a2a28 20px);
   color: #fdd835;
@@ -42,26 +49,20 @@ header {
   width: 80px;
 }
 
-header h1 {
-  font-family: 'Shippori Mincho B1', serif;
-  font-size: 2em;
-  margin: 0;
-  color: #fff8b0;
-  text-shadow: 1px 1px 2px rgba(0,0,0,0.4);
-}
-.title-line {
-  display: flex;
-  align-items: baseline;
-  gap: 16px;
-  flex-wrap: wrap;
-}
-
+header h1,
 .title-line h1 {
   font-family: 'Shippori Mincho B1', serif;
   font-size: 2em;
   margin: 0;
   color: #fff8b0;
   text-shadow: 1px 1px 2px rgba(0,0,0,0.4);
+}
+
+.title-line {
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+  flex-wrap: wrap;
 }
 
 .tel-inline a {
@@ -83,6 +84,10 @@ header h1 {
   letter-spacing: 0.5px;
 }
 
+
+/* --------------------
+  ナビゲーション
+-------------------- */
 nav {
   background-color: #e8c282;
   background-image:
@@ -92,7 +97,6 @@ nav {
   background-size: 20px 20px, 6px 6px, 4px 4px;
   padding: 24px 0 20px;
 }
-
 
 nav ul {
   list-style: none;
@@ -127,6 +131,9 @@ nav a:hover {
 }
 
 
+/* --------------------
+  ヒーローセクション
+-------------------- */
 .hero {
   text-align: center;
   background: #fff8e1;
@@ -138,9 +145,6 @@ nav a:hover {
   max-width: 900px;
   border-radius: 12px;
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
-}
-
-.hero img {
   filter: contrast(1.05) saturate(0.95) sepia(0.1);
   border: 12px double #fff8e1;
 }
@@ -149,6 +153,7 @@ nav a:hover {
   position: relative;
   display: inline-block;
 }
+
 .hero-overlay::before,
 .hero-overlay::after {
   content: '';
@@ -158,9 +163,9 @@ nav a:hover {
   background: radial-gradient(circle at 30% 30%, #b71c1c 0%, #7b1b1b 80%);
   border-radius: 50%;
   box-shadow:
-    0 3px 6px rgba(0, 0, 0, 0.6),   /* メインの落ち影 */
-    inset 1px 1px 2px rgba(255,255,255,0.3), /* 光のハイライト */
-    inset -1px -1px 2px rgba(0,0,0,0.3);     /* へこみ表現 */
+    0 3px 6px rgba(0, 0, 0, 0.6),
+    inset 1px 1px 2px rgba(255,255,255,0.3),
+    inset -1px -1px 2px rgba(0,0,0,0.3);
   z-index: 5;
 }
 
@@ -173,7 +178,6 @@ nav a:hover {
   top: 12px;
   right: 20px;
 }
-
 
 .hero-text {
   position: absolute;
@@ -204,6 +208,9 @@ nav a:hover {
   font-weight: bold;
 }
 
+/* --------------------
+  店主紹介
+-------------------- */
 main section {
   padding: 40px 20px;
   text-align: center;
@@ -215,28 +222,26 @@ section:nth-of-type(even) {
     radial-gradient(circle, rgba(255, 255, 255, 0.4) 1px, transparent 1px),
     radial-gradient(circle, rgba(0, 0, 0, 0.03) 1px, transparent 1px);
   background-size: 6px 6px, 4px 4px;
-
 }
-
 
 section h2 {
   margin-bottom: 48px;
   font-size: 1.6em;
   display: inline-block;
-  padding: 12px 40px 16px 20px; /* 裾をちょっと長めに */
+  padding: 12px 40px 16px 20px;
   font-family: 'Shippori Mincho B1', serif;
   color: #2d1e1c;
   background: #fdd835;
   border: 2px solid #c62828;
-  border-radius: 4px 4px 0 0; /* のれん風に上角だけ丸く */
+  border-radius: 4px 4px 0 0;
   position: relative;
-  box-shadow: 2px 2px 6px rgba(0,0,0,0.1); /* 軽い立体感 */
-}
-section h2::before {
-  content: "🔹"; /* 例えば招き猫やハサミ系のUnicodeも◎ */
-  font-size: 1.1em;
+  box-shadow: 2px 2px 6px rgba(0,0,0,0.1);
 }
 
+section h2::before {
+  content: "🔹";
+  font-size: 1.1em;
+}
 
 section h2::after {
   content: "";
@@ -275,7 +280,7 @@ section h2::after {
 }
 
 .owner-photo {
-  border: 8px solid #fff; /* 写真っぽい白フチ */
+  border: 8px solid #fff;
   border-radius: 8px;
   box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.2);
   width: 280px;
@@ -312,13 +317,10 @@ section h2::after {
   font-style: italic;
   font-family: 'Yuji Syuku', serif;
   background-color: #fff8e1;
-  border-left: 4px solid #c62828;
+  border-left: 6px dotted #c62828;
   padding: 1rem;
   margin-bottom: 1.5rem;
   border-radius: 6px;
-}
-.message-box {
-  border-left: 6px dotted #c62828;
   box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
 }
 
@@ -327,7 +329,10 @@ section h2::after {
   max-width: 640px;
   text-align: left;
 }
-/* ===== 店舗情報用 ===== */
+
+/* --------------------
+  店舗情報
+-------------------- */
 .shop-info dl {
   position: relative;
   display: grid;
@@ -380,8 +385,9 @@ section h2::after {
   border-bottom: 1px dotted #ccc;
 }
 
-
-/* ===== 料金表用 ===== */
+/* --------------------
+  料金表
+-------------------- */
 .price-list dl {
   position: relative;
   display: grid;
@@ -428,7 +434,7 @@ section h2::after {
 }
 
 .price-list dd {
-  text-align: right; /* ←ここが大事：金額を右寄せに */
+  text-align: right;
   margin: 0;
   padding-bottom: 6px;
   border-bottom: 1px dotted #ccc;
@@ -452,20 +458,20 @@ section h2::after {
 .price-list dt small {
   display: block;
   font-size: 0.8em;
-  color: #a55b00; /* 赤茶系で温かみを統一 */
+  color: #a55b00;
   margin-top: 0.2em;
   font-family: 'Kosugi Maru', sans-serif;
   letter-spacing: 0.02em;
 }
 
-
-
+/* --------------------
+  ボタンスタイル
+-------------------- */
 .link {
   text-align: center;
-  margin-top: 2rem; /* ←余白の確保 */
+  margin-top: 2rem;
 }
 
-/* ▶️ 共通のボタンスタイル */
 .call-btn,
 .link-btn {
   position: relative;
@@ -484,7 +490,6 @@ section h2::after {
   border: none;
 }
 
-/* ▶️ 共通のホバー挙動 */
 .call-btn:hover,
 .link-btn:hover {
   transform: scale(1.02) rotate(-1deg);
@@ -492,7 +497,6 @@ section h2::after {
   box-shadow: 4px 4px 10px rgba(0,0,0,0.4);
 }
 
-/* ▶️ 共通のピン／メモ風 ::before装飾 */
 .call-btn::before,
 .link-btn::before {
   position: absolute;
@@ -512,16 +516,17 @@ section h2::after {
   white-space: nowrap;
 }
 
-/* ▶️ 個別指定：電話ボタン */
 .call-btn::before {
   content: '📞';
 }
 
-/* ▶️ 個別指定：リンクボタン */
 .link-btn::before {
   content: '📌';
 }
 
+/* --------------------
+  アクセス・フッター
+-------------------- */
 .access img {
   max-width: 90%;
   border-radius: 8px;
@@ -569,6 +574,9 @@ footer img {
   color: #2d1e1c;
 }
 
+/* --------------------
+  レスポンシブ対応
+-------------------- */
 @media (max-width: 600px) {
   nav ul {
     flex-direction: column;
@@ -586,84 +594,7 @@ footer img {
     width: 100%;
     text-align: center;
   }
-}
 
-
-.menu-intro {
-  text-align: center;
-  background: #fff8e1;
-  padding: 2rem 1rem;
-}
-
-.menu-intro .catchcopy {
-  font-size: 1.4em;
-  font-weight: bold;
-  color: #c62828;
-  margin-top: 1rem;
-}
-
-.menu-table {
-  text-align: center;
-  padding: 2rem 1rem;
-}
-
-.menu-table h3 {
-  margin-top: 2rem;
-  font-size: 1.3em;
-  background: #fdd835;
-  display: inline-block;
-  padding: 0.4em 1em;
-  border: 2px solid #2d1e1c;
-  border-radius: 4px;
-}
-
-.menu-table table {
-  margin: 1rem auto;
-  max-width: 600px;
-  width: 100%;
-  border-collapse: separate;
-}
-
-.menu-table th {
-  border-bottom: 4px solid #fff;
-  padding: 0.8rem;
-  background: #ffeb99;
-  border-left: 5px solid #c62828;
-  text-align: left;
-  position: relative;
-}
-
-.menu-table td {
-  border-bottom: 4px solid #fff;
-  padding: 0.8rem;
-  background: #fff8e1;
-  color: #000;
-}
-
-.menu-comment {
-  font-style: italic;
-  text-align: center;
-  margin: 2rem 0;
-  color: #2d1e1c;
-}
-
-.access .catchcopy {
-  font-size: 1.6em;
-  color: #c62828;
-  margin-bottom: 1.5rem;
-}
-
-.access iframe {
-  border: 0;
-  border-radius: 8px;
-}
-
-.access .link img {
-  border-radius: 8px;
-  box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
-}
-
-@media (max-width: 600px) {
   .header-box {
     flex-direction: column;
     align-items: center;
@@ -698,4 +629,3 @@ footer img {
     width: 70px;
   }
 }
-
