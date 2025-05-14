@@ -439,6 +439,7 @@ section h2::after {
   margin: 0;
   padding-bottom: 6px;
   border-bottom: 1px dotted #ccc;
+  white-space: nowrap;
 }
 
 .price-list .price-block {
